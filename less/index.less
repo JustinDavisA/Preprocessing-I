@@ -48,12 +48,79 @@ table {
 	border-spacing: 0;
 }
 
-/* Set every element's box-sizing to border-box */
+// VARIABLES
+
+@themeColor: grey;
+
+@fontStack: 'ZCOOL QingKe HuangYou', cursive;
+
+// MIXINS
+
+.center() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
+  .twoColumns() {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  }
+
+// GENERAL STYLES
+// Set every element's box-sizing to border-box
 * {
     box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	background-color: #000033;
 }
 
+h1, h2, h3 {
+	margin: 15px 0;
+}
+
+.pageContainer {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 15px;
+	background-color: #000066;
+	color: @themeColor;
+	font-family: @fontStack;
+	font-size: 125%;
+}
+
+header {
+	img {
+		margin: 15px auto;
+		width: 40%;
+	}
+
+	nav {
+		display: flex;
+		justify-content: space-around;
+		a {
+			text-decoration: none;
+			color: #ccccff;
+		}
+	}
+}
+
+section {
+	padding: 15px;
+}
+
+.intro {
+	display: flex;
+	align-items: center;
+	img {
+		margin: 15px;
+	}
+}
+
+footer {
+	padding: 15px;
+}
